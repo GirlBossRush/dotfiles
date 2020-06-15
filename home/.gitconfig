@@ -1,0 +1,79 @@
+[user]
+	name = Teffen Ellis
+	email = teffen@nirri.us
+[alias]
+  st = status
+  pt = push --tags
+  co = checkout
+  cm = commit
+  t = commit
+  br = branch
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  sub = submodule update
+  this-branch = rev-parse --abbrev-ref HEAD
+  remote-branch-name = "!git describe --contains --all --match 'remotes/origin/*' --always HEAD"
+  shove = "!git push -u origin $(git this-branch)"
+  meld = merge --no-ff
+  toss = reset --hard
+  rollback = reset --hard HEAD~$1
+  merge-to-branch = !merge-to-branch.sh -b $1
+  diffy = diff --ignore-space-change
+  switch = !legit switch \"$@\"
+  branches = !legit branches
+  sprout = !legit sprout \"$@\"
+  unpublish = !legit unpublish \"$@\"
+  harvest = !legit harvest \"$@\"
+  sync = !legit sync \"$@\"
+  publish = !legit publish \"$@\"
+  graft = !legit graft \"$@\"
+[help]
+  autocorrect = 20
+[core]
+  editor = /usr/bin/vim
+  mergeoptions = --no-edit
+  excludesfile = ~/.gitignore_global
+  pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+[pager]
+	log = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+	show = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+	diff = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+[interactive]
+	diffFilter = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight
+[color "diff"]
+  commit = green
+  meta = yellow
+  frag = cyan
+  old = red
+  new = green
+  whitespace = red reverse
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+[color]
+  ui = auto
+[push]
+  default = simple
+[merge]
+	tool = p4merge
+[mergetool]
+	keepBackup = false
+[mergetool "p4merge"]
+	path = /opt/p4v-2013.2.685561/bin/p4merge
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+[url "git@gh.coder-internal.com:"]
+	insteadOf = https://git.coder-internal.com/
+[url "git@gh.coder-internal.com:"]
+	insteadOf = https://gh.coder-internal.com/
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[merge "npm-merge-driver"]
+	name = automatically merge npm lockfiles
+	driver = npx npm-merge-driver merge %A %O %B %P

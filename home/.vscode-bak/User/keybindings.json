@@ -1,0 +1,206 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "cmd+shift+v",
+    "command": "pasteAndIndent.action",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+up",
+    "command": "cursorColumnSelectUp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+down",
+    "command": "cursorColumnSelectDown",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "workbench.view.git"
+  },
+  {
+    "key": "cmd+'",
+    "command": "esQuotes.transformBetweenQuotes",
+    "when": "resourceExtname == .js"
+  },
+  {
+    "key": "cmd+'",
+    "command": "esQuotes.transformBetweenQuotes",
+    "when": "resourceExtname == .ts"
+  },
+  {
+    "key": "cmd+'",
+    "command": "esQuotes.transformBetweenQuotes",
+    "when": "resourceExtname == .tsx"
+  },
+
+  // {
+  //   "key": "shift+cmd+right",
+  //   "command": "cursorEndSelect",
+  //   "when": "editorTextFocus"
+  // },
+  {
+    "key": "ctrl+shift+e",
+    "command": "cursorEndSelect",
+    "when": "editorTextFocus"
+  },
+  // {
+  //   "key": "shift+cmd+left",
+  //   "command": "cursorHomeSelect",
+  //   "when": "editorTextFocus"
+  // },
+  {
+    "key": "ctrl+shift+a",
+    "command": "cursorHomeSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+k r",
+    "command": "editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "f2",
+    "command": "-editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+up",
+    "command": "find.history.showPrevious",
+    "when": "editorFocus && findInputFocussed && findWidgetVisible"
+  },
+  {
+    "key": "alt+up",
+    "command": "-find.history.showPrevious",
+    "when": "editorFocus && findInputFocussed && findWidgetVisible"
+  },
+  {
+    "key": "shift+up",
+    "command": "workbench.action.terminal.findWidget.history.showPrevious",
+    "when": "terminalFindWidgetInputFocused && terminalFindWidgetVisible"
+  },
+  {
+    "key": "alt+up",
+    "command": "-workbench.action.terminal.findWidget.history.showPrevious",
+    "when": "terminalFindWidgetInputFocused && terminalFindWidgetVisible"
+  },
+  {
+    "key": "shift+up",
+    "command": "search.history.showPreviousExcludePattern",
+    "when": "patternExcludesInputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "alt+up",
+    "command": "-search.history.showPreviousExcludePattern",
+    "when": "patternExcludesInputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "shift+up",
+    "command": "search.history.showPreviousIncludePattern",
+    "when": "patternIncludesInputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "alt+up",
+    "command": "-search.history.showPreviousIncludePattern",
+    "when": "patternIncludesInputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "shift+up",
+    "command": "search.history.showPrevious",
+    "when": "searchInputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "alt+up",
+    "command": "-search.history.showPrevious",
+    "when": "searchInputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "shift+up",
+    "command": "editor.action.extensioneditor.showPreviousFindTerm",
+    "when": "extensionEditorFindWidgetInputFocused"
+  },
+  {
+    "key": "alt+up",
+    "command": "-editor.action.extensioneditor.showPreviousFindTerm",
+    "when": "extensionEditorFindWidgetInputFocused"
+  },
+  {
+    "key": "shift+up",
+    "command": "editor.action.webvieweditor.showPreviousFindTerm",
+    "when": "webviewEditorFindWidgetInputFocused"
+  },
+  {
+    "key": "alt+up",
+    "command": "-editor.action.webvieweditor.showPreviousFindTerm",
+    "when": "webviewEditorFindWidgetInputFocused"
+  },
+  {
+    "key": "shift+down",
+    "command": "find.history.showNext",
+    "when": "editorFocus && findInputFocussed && findWidgetVisible"
+  },
+  {
+    "key": "alt+down",
+    "command": "-find.history.showNext",
+    "when": "editorFocus && findInputFocussed && findWidgetVisible"
+  },
+  {
+    "key": "shift+down",
+    "command": "workbench.action.terminal.findWidget.history.showNext",
+    "when": "terminalFindWidgetInputFocused && terminalFindWidgetVisible"
+  },
+  {
+    "key": "alt+down",
+    "command": "-workbench.action.terminal.findWidget.history.showNext",
+    "when": "terminalFindWidgetInputFocused && terminalFindWidgetVisible"
+  },
+  {
+    "key": "shift+down",
+    "command": "search.history.showNextExcludePattern",
+    "when": "patternExcludesInputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "alt+down",
+    "command": "-search.history.showNextExcludePattern",
+    "when": "patternExcludesInputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "shift+down",
+    "command": "search.history.showNextIncludePattern",
+    "when": "patternIncludesInputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "alt+down",
+    "command": "-search.history.showNextIncludePattern",
+    "when": "patternIncludesInputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "shift+down",
+    "command": "search.history.showNext",
+    "when": "searchInputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "alt+down",
+    "command": "-search.history.showNext",
+    "when": "searchInputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "cmd+k q",
+    "command": "workbench.action.quit"
+  },
+  {
+    "key": "cmd+q",
+    "command": "-workbench.action.quit"
+  },
+]

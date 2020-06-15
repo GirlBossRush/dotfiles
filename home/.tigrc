@@ -1,0 +1,12 @@
+set git-colors = yes
+set diff-highlight = yes
+set show-changes = yes
+set commit-order = topo
+set refresh-mode = auto
+set main-view = \
+  date:default \
+  author:yes \
+  id:yes,color \
+  commit-title:graph=yes,refs=yes
+bind status D !@?rm %(file)
+

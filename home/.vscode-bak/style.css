@@ -1,0 +1,7 @@
+.monaco-workbench > .part.statusbar {
+  background-color: #333333 !important;
+}
+
+.dropdown.send-feedback {
+  display: none !important;
+}

@@ -1,0 +1,68 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "editor.tabSize": 2,
+  "editor.selectionHighlight": false,
+  "editor.rulers": [
+    80
+  ],
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 90,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "Fira Code",
+  "editor.lineHeight": 18,
+  "editor.fontSize": 13,
+  "workbench.activityBar.visible": false,
+  "files.insertFinalNewline": true,
+  "editor.renderLineHighlight": "all",
+  "files.trimTrailingWhitespace": true,
+  "editor.renderIndentGuides": true,
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Monokai",
+  "workbench.iconTheme": "material-icon-theme",
+  "sublimeTextKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.formatOnPaste": true,
+  "workbench.editor.tabCloseButton": "off",
+  "window.nativeTabs": true,
+  "[stylus]": {},
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "tslint.packageManager": "yarn",
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": false,
+  "typescript.autoImportSuggestions.enabled": false,
+  "typescript.quickSuggestionsForPaths": true,
+  "window.newWindowDimensions": "inherit",
+  "javascript.validate.enable": false,
+  "window.title": "${activeEditorMedium}${separator}${rootName}",
+  "window.closeWhenEmpty": true,
+  "window.titleBarStyle": "custom",
+  "search.smartCase": true,
+  "workbench.fontAliasing": "default",
+  "standard.enable": true,
+  "standard.usePackageJson": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "gitlens.codeLens.scopes": [
+    "containers"
+  ],
+  "gitlens.codeLens.enabled": false,
+  "gitlens.keymap": "chorded",
+  "languageStylus.useSeparator": false,
+  "emmet.excludeLanguages": [
+    "markdown",
+    "pug"
+  ],
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true
+  }
+}
