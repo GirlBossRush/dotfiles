@@ -2,7 +2,7 @@
 
 if [ -x "$(command -v diff-highlight)" ]; then
   diff-highlight "$@"
-elif [ -x "$(command -v diff-so-pretty)" ]; then
+elif [ -x "$(command -v diff-so-fancy)" ]; then
   diff-so-pretty "$@"
 else
   echo 'Error: diff highlighter not installed.' >&2
