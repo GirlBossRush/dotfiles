@@ -60,9 +60,11 @@ ME="$(whoami)"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git autojump)
+plugins=(git)
 source $ZSH/oh-my-zsh.sh
-PATH=$PATH:/home/$ME/.oh-my-vim/bin
+PATH=$PATH:$HOME/.oh-my-vim/bin
+
+PATH=$PATH:$HOME/usr/bin
 
 #### Colors for man pages ####
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
@@ -80,6 +82,8 @@ setopt no_hist_verify # Skip substitution confirmations.
 setopt nobeep
 
 export PATH=/usr/local/lib/node_modules:$PATH
+
+export PATH=/usr/local/share/git-core/contrib/diff-highlight:$PATH
 
 # Brew
 export PATH=/usr/local/bin:$PATH
@@ -104,10 +108,10 @@ test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_in
 
 # export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-export GOPATH=$HOME/go
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
+# export GOPATH=$HOME/go
+# export GOROOT=/usr/local/opt/go/libexec
+# export PATH=$PATH:$GOPATH/bin
+# export PATH=$PATH:$GOROOT/bin
 
 # PATH="/Users/teffen/perl5/bin${PATH:+:${PATH}}"; export PATH;
 # PERL5LIB="/Users/teffen/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -119,10 +123,16 @@ unalias gp
 
 # Limit `ls` tab completion to directory names.
 compdef _dirs ls
-compdef _dirs exa
 
-alias ls="exa"
+if [ -x "$(command -v exa)" ]; then
+  compdef _dirs exa
+  alias ls="exa"
+fi
+
 export PATH="/usr/local/opt/curl/bin:$PATH"
+
+# Coder Enterprise
+export PATH=/home/coder/enterprise/devbin:$PATH
 
 # Hide annoying banners.
 DISABLE_OPENCOLLECTIVE=true

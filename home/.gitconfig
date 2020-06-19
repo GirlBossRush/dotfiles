@@ -32,13 +32,13 @@
   editor = /usr/bin/vim
   mergeoptions = --no-edit
   excludesfile = ~/.gitignore_global
-  pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+  pager = multi-diff-highlight | less
 [pager]
-	log = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
-	show = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
-	diff = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+	log = multi-diff-highlight | less
+	show = multi-diff-highlight | less
+	diff = multi-diff-highlight | less
 [interactive]
-	diffFilter = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight
+	diffFilter = multi-diff-highlight
 [color "diff"]
   commit = green
   meta = yellow
@@ -46,7 +46,7 @@
   old = red
   new = green
   whitespace = red reverse
-[color "diff-highlight"]
+[color "multi-diff-highlight"]
   oldNormal = red bold
   oldHighlight = red bold 52
   newNormal = green bold
