@@ -82,8 +82,7 @@ setopt no_hist_verify # Skip substitution confirmations.
 setopt nobeep
 
 export PATH=/usr/local/lib/node_modules:$PATH
-
-export PATH=/usr/local/share/git-core/contrib/diff-highlight:$PATH
+export PATH=/usr/local/share/git-core/contrib/diff-highlight:/usr/share/git/diff-highlight:$PATH
 
 # Brew
 export PATH=/usr/local/bin:$PATH
