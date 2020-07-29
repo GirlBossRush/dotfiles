@@ -2,43 +2,45 @@
 	name = Teffen Ellis
 	email = teffen@nirri.us
 [alias]
+  # Utilities.
+  this-branch = rev-parse --abbrev-ref HEAD
+  remote-branch-name = "!git describe --contains --all --match 'remotes/origin/*' --always HEAD"
+  # Save your fingers...
   st = status
   pt = push --tags
   co = checkout
   cm = commit
   t = commit
   br = branch
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   sub = submodule update
-  this-branch = rev-parse --abbrev-ref HEAD
-  remote-branch-name = "!git describe --contains --all --match 'remotes/origin/*' --always HEAD"
-  shove = "!git push -u origin $(git this-branch)"
+  # Merge more explicitly.
   meld = merge --no-ff
+  # Revert currently tracked files. Retains new files.
   toss = reset --hard
+  # Go back one commit.
   rollback = reset --hard HEAD~$1
-  merge-to-branch = !merge-to-branch.sh -b $1
+  # Push a new branch to a remote using its local name.
+  shove = "!git push -u origin $(git this-branch)"
+  # Pretty logs.
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  # Recent changes to local branches. Useful if you forget branch names.
+  recent = "!git for-each-ref --color=always --count=8 --sort=-committerdate refs/heads/ --format='%(color:green)%(committerdate:relative) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)\n%(color:bold cyan)%(authorname)%(color:reset): %(contents:subject)\n' | less -r"
+  # Diff without whitespace changes.
   diffy = diff --ignore-space-change
-  switch = !legit switch \"$@\"
-  branches = !legit branches
-  sprout = !legit sprout \"$@\"
-  unpublish = !legit unpublish \"$@\"
-  harvest = !legit harvest \"$@\"
-  sync = !legit sync \"$@\"
-  publish = !legit publish \"$@\"
-  graft = !legit graft \"$@\"
 [help]
   autocorrect = 20
 [core]
   editor = /usr/bin/vim
+  # Open the editor, even for merge commits.
   mergeoptions = --no-edit
   excludesfile = ~/.gitignore_global
-  pager = multi-diff-highlight | less
+  pager = diff-highlight | less
 [pager]
-	log = multi-diff-highlight | less
-	show = multi-diff-highlight | less
-	diff = multi-diff-highlight | less
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
 [interactive]
-	diffFilter = multi-diff-highlight
+	diffFilter = diff-highlight
 [color "diff"]
   commit = green
   meta = yellow
@@ -46,7 +48,7 @@
   old = red
   new = green
   whitespace = red reverse
-[color "multi-diff-highlight"]
+[color "diff-highlight"]
   oldNormal = red bold
   oldHighlight = red bold 52
   newNormal = green bold

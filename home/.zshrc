@@ -132,7 +132,7 @@ fi
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
 # Coder Enterprise
-export PATH=/home/coder/enterprise/devbin:$PATH
+export PATH=$HOME/enterprise/devbin:$PATH
 
 # Hide annoying banners.
 DISABLE_OPENCOLLECTIVE=true
