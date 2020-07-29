@@ -1,6 +1,6 @@
 [user]
-	name = Teffen Ellis
-	email = teffen@nirri.us
+  name = Teffen Ellis
+  email = teffen@nirri.us
 [alias]
   # Utilities.
   this-branch = rev-parse --abbrev-ref HEAD
@@ -36,11 +36,11 @@
   excludesfile = ~/.gitignore_global
   pager = diff-highlight | less
 [pager]
-	log = diff-highlight | less
-	show = diff-highlight | less
-	diff = diff-highlight | less
+  log = diff-highlight | less
+  show = diff-highlight | less
+  diff = diff-highlight | less
 [interactive]
-	diffFilter = diff-highlight
+  diffFilter = diff-highlight
 [color "diff"]
   commit = green
   meta = yellow
@@ -58,24 +58,24 @@
 [push]
   default = simple
 [merge]
-	tool = p4merge
+  tool = p4merge
 [mergetool]
-	keepBackup = false
+  keepBackup = false
 [mergetool "p4merge"]
-	path = /opt/p4v-2013.2.685561/bin/p4merge
+  path = /opt/p4v-2013.2.685561/bin/p4merge
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+  insteadOf = https://github.com/
 [url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
+  insteadOf = https://github.com/
 [url "git@gh.coder-internal.com:"]
-	insteadOf = https://git.coder-internal.com/
+  insteadOf = https://git.coder-internal.com/
 [url "git@gh.coder-internal.com:"]
-	insteadOf = https://gh.coder-internal.com/
+  insteadOf = https://gh.coder-internal.com/
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 [merge "npm-merge-driver"]
-	name = automatically merge npm lockfiles
-	driver = npx npm-merge-driver merge %A %O %B %P
+  name = automatically merge npm lockfiles
+  driver = npx npm-merge-driver merge %A %O %B %P
